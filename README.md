@@ -1,78 +1,31 @@
-\# PROGRAMACIÓN II - TRABAJO PRÁCTICO 6: COLECCIONES Y POO AVANZADA
 
+# PROGRAMACIÓN II - TRABAJO PRÁCTICO 7: HERENCIA Y POLIMORFISMO EN JAVA
 
+Este repositorio contiene las soluciones y ejercicios del Módulo 5, enfocados en la aplicación práctica de los pilares del diseño Orientado a Objetos: **Herencia** y **Polimorfismo**.
 
-Este repositorio contiene las soluciones para Práctica 6, enfocado en el uso de estructuras de datos dinámicas en Java y la implementación de relaciones complejas en el paradigma Orientado a Objetos (POO).
+## Objetivo Principal
 
+El objetivo central es desarrollar jerarquías de clases flexibles y reutilizables en Java, demostrando la aplicación de los siguientes conceptos:
 
+-   **Herencia (`extends`):** Crear relaciones "es un" (is-a) entre clases base (superclases) y clases derivadas (subclases).
+-   **Polimorfismo:** Utilizar la sobrescritura (`@Override`) y las llamadas dinámicas a métodos.
+-   **Abstracción:** Definir comportamientos comunes obligatorios mediante **Clases y Métodos Abstractos**.
 
----
+## Ejercicios Clave (Katas)
 
+La práctica se estructura en Katas para afianzar la aplicación de los conceptos:
 
-
-\## Objetivos y Temas Clave
-
-
-
-El trabajo se divide en tres ejercicios principales, que refuerzan los siguientes conceptos:
-
-
-
-\### 1. Sistema de Stock e Inventario (Base)
-
-
-
-\-   \*\*Uso de `ArrayList`:\*\* Estructura principal para gestionar la colección de `Productos`.
-
-\-   \*\*`Enum` Avanzado:\*\* Uso de enumeraciones (`CategoriaProducto`) con métodos y descripciones.
-
-\-   \*\*Funcionalidad:\*\* Implementación de búsqueda, filtrado, actualización de stock y reportes (`mayorStock`, `totalStock`).
-
-
-
-\### 2. Biblioteca y Libros (Composición)
-
-
-
-\-   \*\*Relación 1 a N (Composición):\*\* Modelado de la relación donde una `Biblioteca` contiene múltiples `Libros`, demostrando que los objetos internos dependen del objeto contenedor.
-
-\-   \*\*Clase Autor:\*\* Uso de objetos complejos como atributos (`autor` dentro de `Libro`).
-
-
-
-\### 3. Sistema Académico (Relación Bidireccional)
-
-
-
-\-   \*\*Bidireccionalidad:\*\* Modelado de una relación `Profesor` ↔ `Curso` (1 a N).
-
-\-   \*\*Invariantes de Asociación:\*\* Implementación de métodos "seguros" que \*\*sincronizan la relación\*\* automáticamente (si se asigna un profesor a un curso, el curso se añade a la lista del profesor, y viceversa).
-
-\-   \*\*Modularidad:\*\* Uso de la clase `Universidad` como gestor central de todas las colecciones.
-
-
-
----
-
-
-
-\## Estructura del Proyecto
-
-
-
-El código está organizado en los paquetes y clases correspondientes a cada caso práctico.
-
-
-
-| Paquete / Caso | Clases Principales | Relación Demostrada |
-
+| Kata | Concepto Central | Implementación |
 | :--- | :--- | :--- |
+| **1. Vehículos** | Herencia Básica y `super()` | Jerarquía simple para demostrar la reutilización de código. |
+| **2. Figuras Geométricas** | **Clases y Métodos Abstractos** | Uso de `abstract` para obligar a subclases (`Círculo`, `Rectángulo`) a implementar `calcularArea()`. |
+| **3. Empleados** | Polimorfismo y `instanceof` | Lista polimórfica de empleados; llamada dinámica a `calcularSueldo()` y clasificación segura. |
+| **4. Animales** | Sobrescritura (`@Override`) | Implementación de comportamiento único (`hacerSonido()`) en subclases (`Perro`, `Gato`, `Vaca`). |
 
-| \*\*`stock`\*\* | `Producto`, `CategoriaProducto`, `Inventario` | `ArrayList` y `enum` |
+## Conclusiones Esenciales
 
-| \*\*`biblioteca`\*\* | `Biblioteca`, `Libro`, `Autor` | Composición (Dependencia 1:N) |
+Al finalizar esta práctica, se consolida la comprensión sobre:
 
-| \*\*`academico`\*\* | `Profesor`, `Curso`, `Universidad` | Bidireccionalidad (Sincronización) |
-
-
-
+-   El uso de `super()` para la correcta inicialización de objetos.
+-   La aplicación de `instanceof`, `Upcasting` y `Downcasting` para el manejo seguro de objetos en jerarquías.
+-   El diseño modular y flexible mediante la abstracción.
